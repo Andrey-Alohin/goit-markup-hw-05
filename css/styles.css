@@ -519,6 +519,9 @@ img {
 .close-button:focus svg {
     fill: #fff;
 }
+.form-box {
+    margin-bottom: 8px;
+}
 .modal-text {
     font-weight: 500;
     font-size: 16px;
@@ -578,22 +581,18 @@ img {
     fill: #4d5ae5;
 }
 .privacy-policy-container{
-    display: flex;
-    align-items: center;
     margin-bottom: 24px;
 }
-.privacy-policy-lable {
+.privacy-policy-label {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.16667;
     letter-spacing: 0.04em;
     color: #8e8f99;
-    display: flex;
-    align-items: center;
     cursor: pointer;
 }
 .checkbox-box {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 16px;
@@ -609,18 +608,23 @@ img {
     opacity: 0;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.visually-hidden:checked + .privacy-policy-label .checkbox-box {
+input.visually-hidden:checked + .privacy-policy-label .checkbox-box {
     background-color: #404bbf;
     border: 1px solid #404bbf;
 }
-.visually-hidden:checked + .privacy-policy-label .checkbox-box .checkbox-icon{
+input.visually-hidden:checked + .privacy-policy-label .checkbox-box .checkbox-icon{
     opacity: 1;
+}
+.privacy-link {
+    line-height: 1.33333;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #4d5ae5;
 }
 .modal-button-submit {
     display: block;
     margin: 0 auto;
     border-radius: 4px;
-    padding: 16px 32px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background-color: #4d5ae5;
     font-weight: 500;
@@ -632,4 +636,9 @@ img {
     width: 169px;
     height: 56px;
     border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-button-submit:hover, 
+.modal-button-submit:focus {
+    background-color: #404bbf;
 }
