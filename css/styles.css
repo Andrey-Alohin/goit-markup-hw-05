@@ -385,3 +385,251 @@ img {
 .bottom-socials-links .link-item .link-icon:focus{
     background-color: #31d0aa;
 }
+.bottom-section-subscribe{
+    margin-left: auto;
+}
+.subscribe-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin-bottom: 16px;
+}
+.subscribe-form{
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: center;
+}
+.subscribe-input {
+    width: 264px; 
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background:none;
+    padding: 8px 16px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: #fff;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscribe-input::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: #fff;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscribe-lable:hover .subscribe-input,
+.subscribe-lable:focus .subscribe-input,
+.subscribe-input:focus{
+    border-color: #31d0aa;
+}
+.subscribe-lable:focus .subscribe-input::placeholder,
+.subscribe-lable:hover .subscribe-input::placeholder,
+.subscribe-input:focus::placeholder{
+    color: #31d0aa;
+}
+.subscribe-button {
+    background-color: #4d5ae5;
+    padding: 8px 24px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: center;
+    border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscribe-button:hover,
+.subscribe-button:focus {
+    background-color: #31d0aa;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 408px;
+    min-height: 584px;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fcfcfc;
+    padding: 72px 24px 24px 24px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop:not(.is-open) .modal {
+    transform: translate(-50%, -100%) scale(1.5);
+}
+.modal .close-button {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    border-radius: 100%;
+    background-color: #e7e9fc;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-button svg {
+    fill: #2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-button:hover,
+.close-button:focus{
+    background-color: #404bbf;
+    border: none;
+}
+.close-button:hover svg,
+.close-button:focus svg {
+    fill: #fff;
+}
+.modal-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+    margin-bottom: 16px;
+}
+.input-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    margin-bottom: 4px;
+}
+.input-container {
+    display: flex;
+    align-items: center;
+}
+.input-area {
+    width: 100%;
+    border: 1px solid rgba(46, 47, 66, 0.4);;
+    border-radius: 4px;
+    width: 360px;
+    height: 40px;
+    padding-left: 38px;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-icon{
+    position: absolute;
+    fill: #2e2f42;
+    margin-left: 16px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-area.textarea {
+    resize: none;
+    padding: 8px 16px;
+    height: 120px;
+    margin-bottom: 16px;
+}
+.input-area.textarea::placeholder{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+}
+.input-area:hover,
+.input-area:focus {
+    border-color: #4d5ae5;
+}
+.input-area:hover + .input-icon,
+.input-area:focus + .input-icon{
+    fill: #4d5ae5;
+}
+.privacy-policy-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.privacy-policy-lable {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.checkbox-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    margin-right: 8px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox-box .checkbox-icon {
+    fill: #f4f4fd;
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.visually-hidden:checked + .privacy-policy-label .checkbox-box {
+    background-color: #404bbf;
+    border: 1px solid #404bbf;
+}
+.visually-hidden:checked + .privacy-policy-label .checkbox-box .checkbox-icon{
+    opacity: 1;
+}
+.modal-button-submit {
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 16px 32px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background-color: #4d5ae5;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
+    width: 169px;
+    height: 56px;
+    border: none;
+}
